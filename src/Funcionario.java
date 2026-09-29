@@ -4,12 +4,20 @@ public class Funcionario {
     private double salario;
 
     public Funcionario(String nome, double salario) {
-        nome = nome;
-        salario = salario;
+        this.nome = nome;
+        this.salario = salario;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getNome() {
         return nome;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
     }
 
     public double getSalario() {
@@ -17,7 +25,7 @@ public class Funcionario {
     }
 
     public void aumentarSalario(double percentual) {
-        salario = salario + percentual;
+        salario += salario * percentual / 100;
     }
 
     public void exibirDados() {
